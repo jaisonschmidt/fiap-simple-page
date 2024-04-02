@@ -1,0 +1,39 @@
+html, body {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    font-family: "Oswald", sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.mainBanner {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 528px;
+    width: 100%;
+}
+
+.darkImage {
+    display: none;
+}
+
+[data-theme="dark"] {
+    background-color: #333;
+    color: #fff;
+}
+
+[data-theme="dark"] .mainBanner {
+    background-color: #444;
+}
+
+[data-theme="dark"] .darkImage {
+    display: block;
+}
+
+[data-theme="dark"] .lightImage {
+    display: none;
+}

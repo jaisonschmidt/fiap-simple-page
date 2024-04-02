@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <meta name="description" content="This is my personal website made with static HTML">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="prefetch" href="img/light.jpg">
+    <link rel="prefetch" href="img/dark.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Oswald:wght@200..700&family=Teko:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <main>
+        <section>
+            <img src="img/light.jpg" class="lightImage mainBanner" alt="a beautiful foto showing the day light">
+            <img src="img/dark.jpg" class="darkImage mainBanner" alt="a beautiful foto showing the night sky">
+        </section>
+        <section>
+            <h1>My Personal Website</h1>
+            <p>This is my personal website made with static HTML</p>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('click', function() {
+            const theme = document.body.getAttribute('data-theme');
+            
+            if (theme === 'dark') {
+                document.body.setAttribute('data-theme', 'light');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
